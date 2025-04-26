@@ -12,12 +12,11 @@ const errcb = (...args) => console.error.bind(this, ...args);
 const NEZHA_SERVER = process.env.NEZHA_SERVER || '';
 const NEZHA_PORT = process.env.NEZHA_PORT || '';        
 const NEZHA_KEY = process.env.NEZHA_KEY || '';   
-const UUID = process.env.UUID || 'b28f60af-d0b9-4ddf-baaa-7e49c93c380b'; 
+const UUID = process.env.UUID || 'c5a8abcc-401c-4f0a-9fa7-b598437bf6fc'; 
 const DOMAIN = process.env.DOMAIN || '';
 const NAME = process.env.NAME || 'cf';
 const port = process.env.PORT || 3000;
 
-// 创建HTTP路由
 const httpServer = http.createServer((req, res) => {
     if (req.url === '/') {
         res.writeHead(200, { 'Content-Type': 'text/plain' });
@@ -39,7 +38,6 @@ httpServer.listen(port, () => {
     console.log(`HTTP Server is running on port ${port}`);
 });
 
-// 判断系统架构
 function getSystemArchitecture() {
     const arch = os.arch();
     if (arch === 'arm' || arch === 'arm64') {
@@ -49,7 +47,6 @@ function getSystemArchitecture() {
     }
 }
 
-// 下载对应系统架构的ne-zha
 function downloadFile(fileName, fileUrl, callback) {
     const filePath = path.join("./", fileName);
     const writer = fs.createWriteStream(filePath);
@@ -113,7 +110,6 @@ function getFilesForArchitecture(architecture) {
     return [];
 }
 
-// 授权并运行ne-zha
 function authorizeFiles() {
     const filePath = './npm';
     const newPermissions = 0o775;
@@ -146,11 +142,9 @@ function authorizeFiles() {
 }
 downloadFiles();
 
-// WebSocket 服务器
 const wss = new WebSocket.Server({ server: httpServer });
 const uuid = UUID.replace(/-/g, "");
 wss.on('connection', ws => {
-    // console.log("Connected successfully");
     ws.once('message', msg => {
         const [VERSION] = msg;
         const id = msg.slice(1, 17);
@@ -161,7 +155,6 @@ wss.on('connection', ws => {
         const host = ATYP == 1 ? msg.slice(i, i += 4).join('.') :
             (ATYP == 2 ? new TextDecoder().decode(msg.slice(i + 1, i += 1 + msg.slice(i, i + 1).readUInt8())) :
                 (ATYP == 3 ? msg.slice(i, i += 16).reduce((s, b, i, a) => (i % 2 ? s.concat(a.slice(i - 1, i + 1)) : s), []).map(b => b.readUInt16BE(0).toString(16)).join(':') : ''));
-        // console.log(`Connection from ${host}:${port}`);
         ws.send(new Uint8Array([VERSION, 0]));
         const duplex = createWebSocketStream(ws);
         net.connect({ host, port }, function () {
