@@ -1,3 +1,6 @@
-# ws-nodejs
+## Claw.Cloud搭建vless-ws-tls脚本
 
-wget -N https://raw.githubusercontent.com/yonggekkk/tools-yg/main/1.js && node 1.js
+一键脚本：
+```
+wget -N https://raw.githubusercontent.com/yonggekkk/vless-nodejs/main/app.js && node app.js
+```
