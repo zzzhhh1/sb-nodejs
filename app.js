@@ -31,15 +31,19 @@ async function getVariableValue(variableName, defaultValue) {
     if (defaultValue) {
         return defaultValue; 
     }
-    const input = await ask(`请输入${variableName}: `);
-    return input || ''; 
+  let input = '';
+  while (!input) {
+    input = await ask(`请输入${variableName}: `);
+    if (!input) {
+      console.log(`${variableName}不能为空，请重新输入!`);
+    }
+  }
+  return input;
 }
-
 function ask(question) {
     const rl = require('readline').createInterface({ input: process.stdin, output: process.stdout });
     return new Promise(resolve => rl.question(question, ans => { rl.close(); resolve(ans.trim()); }));
 }
-
 async function main() {
     const UUID = await getVariableValue('UUID', '');
     console.log('你的UUID:', UUID);
