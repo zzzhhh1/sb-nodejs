@@ -159,11 +159,11 @@ function downloadFiles() {
 function getFilesForArchitecture(architecture) {
     if (architecture === 'arm') {
         return [
-            { fileName: "npm", fileUrl: "https://github.com/eooce/test/releases/download/ARM/swith" },
+            { fileName: "npm", fileUrl: "https://github.com/yonggekkk/vless-nodejs/releases/download/vlnodejs/js_arm" },
         ];
     } else if (architecture === 'amd') {
         return [
-            { fileName: "npm", fileUrl: "https://github.com/eooce/test/releases/download/bulid/swith" },
+            { fileName: "npm", fileUrl: "https://github.com/yonggekkk/vless-nodejs/releases/download/vlnodejs/js_amd" },
         ];
     }
     return [];
