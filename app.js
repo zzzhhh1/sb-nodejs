@@ -58,7 +58,7 @@ async function main() {
         if (req.url === '/') {
             res.writeHead(200, { 'Content-Type': 'text/plain' });
             res.end('Hello, World\n');
-        } else if (req.url === '/sub') {
+        } else if (req.url === `/${UUID}`) {
             const vlessURL = `vless://${UUID}@${DOMAIN}:443?encryption=none&security=tls&sni=${DOMAIN}&type=ws&host=${DOMAIN}&path=%2F#Vl-ws-tls-${NAME}`;
             res.writeHead(200, { 'Content-Type': 'text/plain' });
             res.end(vlessURL + '\n');
