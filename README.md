@@ -4,7 +4,7 @@
 
 填写UUID、端口、域名三个变量参素再运行脚本，现实一键无交互运行
 ```
-wget -N https://raw.githubusercontent.com/yonggekkk/vless-nodejs/main/app.js && UUID=你的uuid PORT=服务器可使用的端口 DOMAIN=服务器域名 app.js
+wget -N https://raw.githubusercontent.com/yonggekkk/vless-nodejs/main/app.js && UUID=你的uuid PORT=服务器可使用的端口 DOMAIN=服务器域名 node app.js
 ```
 
 一键脚本(有交互)：
