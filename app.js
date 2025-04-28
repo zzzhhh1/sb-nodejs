@@ -22,7 +22,13 @@ const NEZHA_SERVER = process.env.NEZHA_SERVER || '';
 const NEZHA_PORT = process.env.NEZHA_PORT || '';
 const NEZHA_KEY = process.env.NEZHA_KEY || '';
 const NAME = process.env.NAME || os.hostname();
-
+console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+console.log("甬哥Github项目  ：github.com/yonggekkk");
+console.log("甬哥Blogger博客 ：ygkkk.blogspot.com");
+console.log("甬哥YouTube频道 ：www.youtube.com/@ygkkk");
+console.log("Nodejs真一键无交互Vless代理脚本");
+console.log("当前版本：25.4.28 测试beta1版");
+console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 async function getVariableValue(variableName, defaultValue) {
     const envValue = process.env[variableName];
     if (envValue) {
