@@ -1,11 +1,9 @@
-## Claw.Cloud搭建vless-ws-tls脚本
-
+## Claw.Cloud在Node.js环境搭建vless-ws-tls脚本
 
 一键脚本(无交互)：
 ```
 wget -N https://raw.githubusercontent.com/yonggekkk/vless-nodejs/main/app.js && UUID=你的uuid PORT=服务器可使用的端口 DOMAIN=服务器域名 app.js
 ```
-
 
 一键脚本(有交互)：
 ```
