@@ -15,7 +15,8 @@ wget -N https://raw.githubusercontent.com/yonggekkk/vless-nodejs/main/app.js && 
 ```
 ----------------------------------------------------------
 
-#### 视频教程：
+#### 相关教程可参考[甬哥博客](https://ygkkk.blogspot.com/2025/04/clawcloud.html)，视频教程如下：
+
 [Claw.cloud免费VPS搭建代理最终教程：全网最简单 | 两大无交互回车脚本 | 套CDN优选IP | workers反代 | ArgoSB隧道搭建](https://youtu.be/Esofirx8xrE)
 
 更新中……
