@@ -13,6 +13,12 @@ wget -N https://raw.githubusercontent.com/yonggekkk/vless-nodejs/main/app.js && 
 ```
 wget -N https://raw.githubusercontent.com/yonggekkk/vless-nodejs/main/app.js && node app.js
 ```
+----------------------------------------------------------
+
+#### 视频教程：
+[Claw.cloud免费VPS搭建代理最终教程：全网最简单 | 两大无交互回车脚本 | 套CDN优选IP | workers反代 | ArgoSB隧道搭建](https://youtu.be/Esofirx8xrE)
+
+更新中……
 
 ----------------------------------------------------------
 
