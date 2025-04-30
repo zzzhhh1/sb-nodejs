@@ -2,7 +2,7 @@
 
 一键脚本(无交互)：
 
-填写UUID、端口、域名三个变量参素再运行脚本，现实一键无交互运行
+填写UUID、端口、域名三个变量参素再运行脚本，现实一键无交互运行，每次重装后输出节点信息不变
 ```
 wget -N https://raw.githubusercontent.com/yonggekkk/vless-nodejs/main/app.js && UUID=你的uuid PORT=服务器可使用的端口 DOMAIN=服务器域名 node app.js
 ```
