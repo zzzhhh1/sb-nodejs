@@ -33,4 +33,4 @@ wget -N https://raw.githubusercontent.com/yonggekkk/vless-nodejs/main/app.js && 
 ### 感谢你右上角的star🌟
 [![Stargazers over time](https://starchart.cc/yonggekkk/vless-nodejs.svg)](https://starchart.cc/yonggekkk/vless-nodejs)
 
-### 声明：所有代码来源于Github社区与ChatGPT的整合
+### 声明：所有代码来源于Github社区与ChatGPT的整合 [qwer-search](https://github.com/qwer-search/Webhostmost-ws-nodejs)
