@@ -7,9 +7,15 @@ username=$(whoami)
 if [ -z $vl_port ]; then
 vl_port=$(shuf -i 10000-65535 -n 1)
 fi
+if [ -z $UUID ]; then
+uuid=$(cat /proc/sys/kernel/random/uuid)
+fi
 curl -s -o "/home/$username/domains/$domain/public_html/app.js" "https://raw.githubusercontent.com/yonggekkk/vless-nodejs/beta/app.js"
 curl -s -o "/home/$username/domains/$domain/public_html/package.json" "https://raw.githubusercontent.com/yonggekkk/vless-nodejs/beta/package.json"
 sed -i "s/('UUID', '')/('UUID', '$uuid')/g" "/home/$username/domains/$domain/public_html/app.js"
 sed -i "s/('DOMAIN', '')/('DOMAIN', '$domain')/g" "/home/$username/domains/$domain/public_html/app.js"
 sed -i "s/('PORT', '')/('PORT', '$vl_port')/g" "/home/$username/domains/$domain/public_html/app.js"
+echo "$uuid" > "/home/$username/domains/uuid.txt"
+echo "uuid密码：$uuid 在文件管理器中的uuid.txt文件中可查看复制"
+echo "服务器域名：$domain"
 echo "安装结束"
