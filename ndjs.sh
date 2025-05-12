@@ -7,7 +7,7 @@ username=$(whoami)
 if [ -z $vl_port ]; then
 vl_port=$(shuf -i 10000-65535 -n 1)
 fi
-if [ -z $UUID ]; then
+if [ -z $uuid ]; then
 uuid=$(cat /proc/sys/kernel/random/uuid)
 fi
 curl -s -o "/home/$username/domains/$domain/public_html/app.js" "https://raw.githubusercontent.com/yonggekkk/vless-nodejs/main/app.js"
