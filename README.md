@@ -7,11 +7,15 @@
 wget -N https://raw.githubusercontent.com/yonggekkk/vless-nodejs/main/app.js && UUID=你的uuid PORT=服务器可使用的端口 DOMAIN=服务器域名 node app.js
 ```
 
-一键脚本(有交互)：
+----------------------------------------------------------
 
-脚本运行过程中会要求输入UUID、端口、域名三个参数
+## Webhostmost在Node.js环境搭建vless-ws-tls脚本
+
+一键脚本(无交互)：
+
+UUID=你的uuid PORT=服务器可使用的端口 非必须，但DOMAIN=服务器域名 是必须的
 ```
-wget -N https://raw.githubusercontent.com/yonggekkk/vless-nodejs/main/app.js && node app.js
+wget -N https://raw.githubusercontent.com/yonggekkk/vless-nodejs/main/ndjs.sh && DOMAIN=服务器域名 bash ndjs.sh
 ```
 ----------------------------------------------------------
 
