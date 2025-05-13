@@ -16,9 +16,12 @@ sed -i "s/('UUID', '')/('UUID', '$uuid')/g" "/home/$username/domains/$domain/pub
 sed -i "s/('DOMAIN', '')/('DOMAIN', '$domain')/g" "/home/$username/domains/$domain/public_html/app.js"
 sed -i "s/('PORT', '')/('PORT', '$vl_port')/g" "/home/$username/domains/$domain/public_html/app.js"
 echo "https://$domain:$uuid" > "/home/$username/domains/keepsub.txt"
-pkill -f $uuid
-nohup bash -c "while true; do curl -s https://$domain:$uuid; sleep 30; done" > /dev/null 2>&1 &
-echo "自动保活已启动"
+crontab -l > /tmp/crontab.tmp
+sed -i "/$uuid/d" /tmp/crontab.tmp
+echo "* * * * * curl -s https://$domain:$uuid" >> /tmp/crontab.tmp
+crontab /tmp/crontab.tmp
+rm /tmp/crontab.tmp
+echo "每分钟自动保活已启动"
 sleep 2
 echo "【支持保活的节点分享链接】在文件管理器中的keepsub.txt文件中可查看复制"
 echo "安装结束，请进入Node.js页面进行相关设置"
