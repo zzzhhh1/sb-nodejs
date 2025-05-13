@@ -15,13 +15,13 @@ curl -s -o "/home/$username/domains/$domain/public_html/package.json" "https://r
 sed -i "s/('UUID', '')/('UUID', '$uuid')/g" "/home/$username/domains/$domain/public_html/app.js"
 sed -i "s/('DOMAIN', '')/('DOMAIN', '$domain')/g" "/home/$username/domains/$domain/public_html/app.js"
 sed -i "s/('PORT', '')/('PORT', '$vl_port')/g" "/home/$username/domains/$domain/public_html/app.js"
-echo "https://$domain:$uuid" > "/home/$username/domains/keepsub.txt"
+echo "https://$domain/$uuid" > "/home/$username/domains/keepsub.txt"
 crontab -l > /tmp/crontab.tmp
-sed -i "/$uuid/d" /tmp/crontab.tmp
-echo "* * * * * curl -s https://$domain:$uuid" >> /tmp/crontab.tmp
+sed -i '/curl -s https:/d' /tmp/crontab.tmp
+echo "* * * * * curl -s https://$domain/$uuid" >> /tmp/crontab.tmp
 crontab /tmp/crontab.tmp
 rm /tmp/crontab.tmp
 echo "每分钟自动保活已启动"
 sleep 2
-echo "【支持保活的节点分享链接】在文件管理器中的keepsub.txt文件中可查看复制"
+echo "支持保活的节点分享链接：https://$domain/$uuid 在文件管理器中的keepsub.txt文件中可查看复制"
 echo "安装结束，请进入Node.js页面进行相关设置"
