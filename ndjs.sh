@@ -22,8 +22,9 @@ sed -i '/curl -s https:/d' /tmp/crontab.tmp
 echo "* * * * * curl -s https://$domain/$uuid" >> /tmp/crontab.tmp
 crontab /tmp/crontab.tmp
 rm /tmp/crontab.tmp
-curl -s https://$domain/$uuid
+curl -s https://$domain/$uuid > /dev/null 2>&1
 echo "每分钟自动保活已启动"
 sleep 2
-echo "支持保活的节点分享链接：https://$domain/$uuid 在文件管理器中的keepsub.txt文件中可查看复制"
-echo "安装结束，请进入Node.js页面进行相关设置"
+echo "支持保活的节点分享链接：https://$domain/$uuid"
+
+echo "安装结束，请确保Node.js页面参数已设置完毕"
