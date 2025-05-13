@@ -15,7 +15,10 @@ curl -s -o "/home/$username/domains/$domain/public_html/package.json" "https://r
 sed -i "s/('UUID', '')/('UUID', '$uuid')/g" "/home/$username/domains/$domain/public_html/app.js"
 sed -i "s/('DOMAIN', '')/('DOMAIN', '$domain')/g" "/home/$username/domains/$domain/public_html/app.js"
 sed -i "s/('PORT', '')/('PORT', '$vl_port')/g" "/home/$username/domains/$domain/public_html/app.js"
-echo "$uuid" > "/home/$username/domains/uuid.txt"
-echo "uuid密码：$uuid 在文件管理器中的uuid.txt文件中可查看复制"
-echo "服务器域名：$domain"
-echo "安装结束"
+echo "https://$domain:$uuid" > "/home/$username/domains/keepsub.txt"
+pkill -f $uuid
+nohup bash -c "while true; do curl -s https://$domain:$uuid; sleep 30; done" > /dev/null 2>&1 &
+echo "自动保活已启动"
+sleep 2
+echo "【支持保活的节点分享链接】在文件管理器中的keepsub.txt文件中可查看复制"
+echo "安装结束，请进入Node.js页面进行相关设置"
