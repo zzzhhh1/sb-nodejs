@@ -26,5 +26,4 @@ curl -s https://$domain/$uuid > /dev/null 2>&1
 echo "每分钟自动保活已启动"
 sleep 2
 echo "支持保活的节点分享链接：https://$domain/$uuid"
-
 echo "安装结束，请确保Node.js页面参数已设置完毕"
