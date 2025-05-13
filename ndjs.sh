@@ -17,7 +17,7 @@ sed -i "s/('DOMAIN', '')/('DOMAIN', '$domain')/g" "/home/$username/domains/$doma
 sed -i "s/('PORT', '')/('PORT', '$vl_port')/g" "/home/$username/domains/$domain/public_html/app.js"
 echo "https://$domain/$uuid" > "/home/$username/domains/keepsub.txt"
 crontab -l > /tmp/crontab.tmp
-sed -i "/https/d" /tmp/crontab.tmp
+sed -i '/curl -s https:/d' /tmp/crontab.tmp
 echo "* * * * * curl -s https://$domain/$uuid" >> /tmp/crontab.tmp
 crontab /tmp/crontab.tmp
 rm /tmp/crontab.tmp
