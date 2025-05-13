@@ -10,6 +10,7 @@ fi
 if [ -z $uuid ]; then
 uuid=$(cat /proc/sys/kernel/random/uuid)
 fi
+pkill -f domains
 curl -s -o "/home/$username/domains/$domain/public_html/app.js" "https://raw.githubusercontent.com/yonggekkk/vless-nodejs/main/app.js"
 curl -s -o "/home/$username/domains/$domain/public_html/package.json" "https://raw.githubusercontent.com/yonggekkk/vless-nodejs/main/package.json"
 sed -i "s/('UUID', '')/('UUID', '$uuid')/g" "/home/$username/domains/$domain/public_html/app.js"
@@ -21,6 +22,7 @@ sed -i '/curl -s https:/d' /tmp/crontab.tmp
 echo "* * * * * curl -s https://$domain/$uuid" >> /tmp/crontab.tmp
 crontab /tmp/crontab.tmp
 rm /tmp/crontab.tmp
+curl -s https://$domain/$uuid
 echo "每分钟自动保活已启动"
 sleep 2
 echo "支持保活的节点分享链接：https://$domain/$uuid 在文件管理器中的keepsub.txt文件中可查看复制"
