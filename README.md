@@ -1,14 +1,3 @@
-## Claw.Cloud在Node.js环境搭建vless-ws-tls脚本
-
-一键脚本(无交互)：
-
-填写UUID、端口、域名三个变量再运行脚本，现实一键无交互运行，每次重装后输出节点信息不变
-```
-wget -N https://raw.githubusercontent.com/yonggekkk/vless-nodejs/main/app.js && UUID=你的uuid PORT=服务器可使用的端口 DOMAIN=服务器域名 node app.js
-```
-
-----------------------------------------------------------
-
 ## Webhostmost在Node.js环境搭建vless-ws-tls脚本
 
 一键脚本(无交互)：
@@ -17,8 +6,20 @@ wget -N https://raw.githubusercontent.com/yonggekkk/vless-nodejs/main/app.js && 
 
 2、快捷方式```bash ndjs.sh```，如果想变更uuid、端口、服务器域名，可将变量放在快捷方式前面快速执行
 
+3、默认自动安装cron保活
+
 ```
 wget -N https://raw.githubusercontent.com/yonggekkk/vless-nodejs/main/ndjs.sh && DOMAIN=服务器域名 bash ndjs.sh
+```
+----------------------------------------------------------
+
+## Claw.Cloud在Node.js环境搭建vless-ws-tls脚本
+
+一键脚本(无交互)：
+
+填写UUID、端口、域名三个变量再运行脚本，现实一键无交互运行，每次重装后输出节点信息不变
+```
+wget -N https://raw.githubusercontent.com/yonggekkk/vless-nodejs/main/app.js && UUID=你的uuid PORT=服务器可使用的端口 DOMAIN=服务器域名 node app.js
 ```
 ----------------------------------------------------------
 
