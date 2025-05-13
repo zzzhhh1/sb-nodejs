@@ -13,7 +13,10 @@ wget -N https://raw.githubusercontent.com/yonggekkk/vless-nodejs/main/app.js && 
 
 一键脚本(无交互)：
 
-UUID=你的uuid PORT=服务器可使用的端口 都是非必填，自动随机，但DOMAIN=服务器域名 是必填的
+1、UUID=你的uuid PORT=服务器可使用的端口 都是非必填，自动随机，但DOMAIN=服务器域名 是必填的
+
+2、快捷方式```bash ndjs.sh```，如果想变更uuid、端口、服务器域名，可将变量放在快捷方式前面快速执行
+
 ```
 wget -N https://raw.githubusercontent.com/yonggekkk/vless-nodejs/main/ndjs.sh && DOMAIN=服务器域名 bash ndjs.sh
 ```
