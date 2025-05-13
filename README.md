@@ -7,15 +7,19 @@
 wget -N https://raw.githubusercontent.com/yonggekkk/vless-nodejs/main/app.js && UUID=你的uuid PORT=服务器可使用的端口 DOMAIN=服务器域名 node app.js
 ```
 
-一键脚本(有交互)：
+----------------------------------------------------------
 
-脚本运行过程中会要求输入UUID、端口、域名三个参数
+## Webhostmost在Node.js环境搭建vless-ws-tls脚本
+
+一键脚本(无交互)：
+
+UUID=你的uuid PORT=服务器可使用的端口 都是非必填，自动随机，但DOMAIN=服务器域名 是必填的
 ```
-wget -N https://raw.githubusercontent.com/yonggekkk/vless-nodejs/main/app.js && node app.js
+wget -N https://raw.githubusercontent.com/yonggekkk/vless-nodejs/main/ndjs.sh && DOMAIN=服务器域名 bash ndjs.sh
 ```
 ----------------------------------------------------------
 
-#### 相关教程可参考[甬哥博客](https://ygkkk.blogspot.com/2025/04/clawcloud.html)，视频教程如下：
+#### 相关教程可参考甬哥博客，视频教程如下：
 
 [Claw.cloud免费VPS搭建代理最终教程：全网最简单 | 两大无交互回车脚本 | 套CDN优选IP | workers反代 | ArgoSB隧道搭建](https://youtu.be/Esofirx8xrE)
 

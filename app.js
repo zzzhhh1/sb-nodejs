@@ -4,7 +4,6 @@ const { Buffer } = require('buffer');
 const fs = require('fs');
 const path = require('path');
 const net = require('net');
-const { randomUUID } = require('crypto');
 const { exec, execSync } = require('child_process');
 function ensureModule(name) {
     try {
