@@ -23,5 +23,5 @@ crontab /tmp/crontab.tmp
 rm /tmp/crontab.tmp
 echo "每分钟自动保活已启动"
 sleep 2
-echo "【支持保活的节点分享链接】在文件管理器中的keepsub.txt文件中可查看复制"
+echo "支持保活的节点分享链接：https://$domain/$uuid 在文件管理器中的keepsub.txt文件中可查看复制"
 echo "安装结束，请进入Node.js页面进行相关设置"
