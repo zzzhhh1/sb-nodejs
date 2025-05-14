@@ -17,13 +17,4 @@ sed -i "s/('UUID', '')/('UUID', '$uuid')/g" "/home/$username/domains/$domain/pub
 sed -i "s/('DOMAIN', '')/('DOMAIN', '$domain')/g" "/home/$username/domains/$domain/public_html/app.js"
 sed -i "s/('PORT', '')/('PORT', '$vl_port')/g" "/home/$username/domains/$domain/public_html/app.js"
 echo "https://$domain/$uuid" > "/home/$username/domains/keepsub.txt"
-crontab -l > /tmp/crontab.tmp
-sed -i '/--connect-timeout/d' /tmp/crontab.tmp
-echo "* * * * * curl -sk --retry 3 --connect-timeout 5 -A "Mozilla/5.0" https://$domain/$uuid" >> /tmp/crontab.tmp
-crontab /tmp/crontab.tmp
-rm /tmp/crontab.tmp
-echo "每分钟自动保活已启动"
-curl -sk --retry 3 --connect-timeout 5 -A "Mozilla/5.0" https://$domain/$uuid > /dev/null 2>&1
-sleep 2
-echo "支持保活的节点分享链接：https://$domain/$uuid"
-echo "安装结束，请确保Node.js页面参数已设置完毕"
+
