@@ -8,17 +8,8 @@ export port_hy2=${hypt:-'22222'}
 export port_tu=${tupt:-'11111'}
 export ym_vl_re=${reym:-''}
 
-sbcore=$(curl -Ls https://data.jsdelivr.com/v1/package/gh/SagerNet/sing-box | grep -Eo '"[0-9.]+",' | sed -n 1p | tr -d '",')
-sbname="sing-box-$sbcore-linux-$cpu"
-echo "下载sing-box最新正式版内核：$sbcore"
-curl -L -o sing-box.tar.gz  -# --retry 2 https://github.com/SagerNet/sing-box/releases/download/v$sbcore/$sbname.tar.gz
-if [[ -f 'sing-box.tar.gz' ]]; then
-tar xzf ./sing-box.tar.gz -C ./
-mv ./"$sbname"/sing-box ./
-rm -rf ./sing-box.tar.gz ./"$sbname"
-else
-echo "下载失败，请检测网络" && exit
-fi
+curl -L -o sing-box  -# --retry 2 https://github.com/yonggekkk/vless-nodejs/releases/download/vlnodejs/sing-box
+chomd +x sing-box
 if [ -z $port_vl_re ]; then
 port_vl_re=$(shuf -i 10000-65535 -n 1)
 fi
