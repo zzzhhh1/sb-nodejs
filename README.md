@@ -1,17 +1,3 @@
-## Webhostmost在Node.js环境搭建vless-ws-tls脚本
-
-1、UUID=你的uuid PORT=服务器可使用的端口 都是非必填，自动随机，但DOMAIN=服务器域名 是必填的
-
-2、快捷方式```bash ndjs.sh```，如果想变更uuid、端口、服务器域名，可将变量放在快捷方式前面快速执行
-
-3、默认自动运行cron保活
-
-Webhostmost专用一键脚本(无交互)：
-
-```
-wget -N https://raw.githubusercontent.com/yonggekkk/vless-nodejs/main/ndjs.sh && DOMAIN=服务器域名 bash ndjs.sh
-```
-----------------------------------------------------------
 
 ## Claw.Cloud在Node.js环境搭建vless-ws-tls脚本
 
