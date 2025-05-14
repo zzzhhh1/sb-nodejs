@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "ws": "^8.14.2",
-    "axios": "^1.6.2"
+    "axios": "^1.6.2",
+    "mime-types": "^2.1.35"
   },
   "engines": {
     "node": ">=14"
