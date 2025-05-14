@@ -9,7 +9,7 @@ export port_tu=${tupt:-'11111'}
 export ym_vl_re=${reym:-''}
 
 curl -L -o sing-box  -# --retry 2 https://github.com/yonggekkk/vless-nodejs/releases/download/vlnodejs/sing-box
-chomd +x sing-box
+chmod +x sing-box
 if [ -z $port_vl_re ]; then
 port_vl_re=$(shuf -i 10000-65535 -n 1)
 fi
