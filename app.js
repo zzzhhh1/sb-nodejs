@@ -86,7 +86,7 @@ vless://${UUID}@[2400:cb00:2049::]:443?encryption=none&security=tls&sni=${DOMAIN
             vlessURL = `vless://${UUID}@${DOMAIN}:443?encryption=none&security=tls&sni=${DOMAIN}&type=ws&host=${DOMAIN}&path=%2F#Vl-ws-tls-${NAME}`;
             }
             res.writeHead(200, { 'Content-Type': 'text/plain' });
-            res.end(vlessURL + '\n');
+            res.end(vlessURL);
         } else {
             res.writeHead(404, { 'Content-Type': 'text/plain' });
             res.end('Not Found\n');
