@@ -23,6 +23,7 @@ echo "* * * * * curl -sk --retry 3 --connect-timeout 5 -A "Mozilla/5.0" https://
 crontab /tmp/crontab.tmp
 rm /tmp/crontab.tmp
 echo "每分钟自动保活已启动"
+curl -sk --retry 3 --connect-timeout 5 -A "Mozilla/5.0" https://$domain/$uuid > /dev/null 2>&1
 sleep 2
 echo "支持保活的节点分享链接：https://$domain/$uuid"
 echo "安装结束，请确保Node.js页面参数已设置完毕"
