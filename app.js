@@ -86,7 +86,7 @@ async function main() {
             vlessURL = `vless://${UUID}@${DOMAIN}:443?encryption=none&security=tls&sni=${DOMAIN}&type=ws&host=${DOMAIN}&path=%2F#Vl-ws-tls-${NAME}`;
             }
             res.writeHead(200, { 'Content-Type': 'text/plain' });
-            res.end(vlessURL + '\n');
+            res.end(vlessURL.trim() + '\n');
         } else {
             res.writeHead(404, { 'Content-Type': 'text/plain' });
             res.end('Not Found\n');
