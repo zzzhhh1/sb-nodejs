@@ -19,7 +19,7 @@ sed -i "s/('PORT', '')/('PORT', '$vl_port')/g" "/home/$username/domains/$domain/
 echo "https://$domain/$uuid" > "/home/$username/domains/keepsub.txt"
 crontab -l > /tmp/crontab.tmp
 sed -i '/--connect-timeout/d' /tmp/crontab.tmp
-echo "* * * * * curl -sk --retry 3 --connect-timeout 5 -A "Mozilla/5.0" http://$domain/$uuid" >> /tmp/crontab.tmp
+echo "* * * * * curl -sk --retry 3 --connect-timeout 5 -A "Mozilla/5.0" https://$domain/$uuid" >> /tmp/crontab.tmp
 crontab /tmp/crontab.tmp
 rm /tmp/crontab.tmp
 echo "每分钟自动保活已启动"
