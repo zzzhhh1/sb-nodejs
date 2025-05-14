@@ -22,7 +22,6 @@ sed -i '/--connect-timeout/d' /tmp/crontab.tmp
 echo "* * * * * curl -sk --retry 3 --connect-timeout 5 -A "Mozilla/5.0" http://$domain/$uuid" >> /tmp/crontab.tmp
 crontab /tmp/crontab.tmp
 rm /tmp/crontab.tmp
-curl -sk --retry 3 --connect-timeout 5 -A "Mozilla/5.0" http://$domain/$uuid > /dev/null 2>&1
 echo "每分钟自动保活已启动"
 sleep 2
 echo "支持保活的节点分享链接：https://$domain/$uuid"
