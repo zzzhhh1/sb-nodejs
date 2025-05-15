@@ -65,7 +65,7 @@ async function main() {
             res.end('Hello, World-YGkkk\n');
         } else if (req.url === `/${UUID}`) {
             let vlessURL;
-            if (NAME.includes('webhostmost')) {
+            if (NAME.includes('server')) {
             vlessURL = `vless://${UUID}@${DOMAIN}:443?encryption=none&security=tls&sni=${DOMAIN}&type=ws&host=${DOMAIN}&path=%2F#Vl-ws-tls-${NAME}
 vless://${UUID}@104.16.0.0:443?encryption=none&security=tls&sni=${DOMAIN}&type=ws&host=${DOMAIN}&path=%2F#Vl-ws-tls-${NAME}
 vless://${UUID}@104.17.0.0:443?encryption=none&security=tls&sni=${DOMAIN}&type=ws&host=${DOMAIN}&path=%2F#Vl-ws-tls-${NAME}
