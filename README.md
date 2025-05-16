@@ -9,7 +9,7 @@ Webhostmost老账户专用一键脚本(无交互)：
 2、快捷方式```bash ndjs.sh```，如果想变更uuid、端口、服务器域名，可将变量放在快捷方式前面快速执行
 
 ```
-wget -N https://raw.githubusercontent.com/yonggekkk/vless-nodejs/main/ndjs.sh && DOMAIN=已解析在CF的域名 bash ndjs.sh
+wget -N https://raw.githubusercontent.com/yonggekkk/sb-nodejs/main/whm.sh && DOMAIN=已解析在CF的域名 bash whm.sh
 ```
 
 Webhostmost新/老账户，建议使用外部保活方式，可使用workers_keep文件进行保活
