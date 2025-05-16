@@ -1,8 +1,10 @@
 ## 一、Webhostmost在Node.js环境搭建vless-ws-tls脚本
 
-Webhostmost新账户使用Node.js本地环境进行搭建
+Webhostmost新账户目前仅支持Node.js本地环境编辑文件方式搭建
 
-Webhostmost老账户专用一键脚本(无交互)：
+Webhostmost老账户可使用专用一键脚本(无交互)，也可以Node.js本地环境编辑文件方式搭建
+
+Webhostmost老账户专用脚本如下：
 
 1、UUID=你的uuid PORT=服务器可使用的端口 都是非必填，自动随机，但DOMAIN=已解析在CF的域名 是必填的
 
