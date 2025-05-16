@@ -16,7 +16,7 @@ wget -N https://raw.githubusercontent.com/yonggekkk/sb-nodejs/main/whm.sh && DOM
 
 Webhostmost新/老账户，建议使用外部保活方式，可使用workers_keep文件进行保活
 
-保活地址：https://你已解析在CF的域名/你的uuid
+保活及节点信息地址：https://你已解析在CF的域名/你的uuid
 
 -----------------------------------------------------
 
