@@ -18,4 +18,6 @@ sed -i "s/('DOMAIN', '')/('DOMAIN', '$domain')/g" "/home/$username/domains/$doma
 sed -i "s/('PORT', '')/('PORT', '$vl_port')/g" "/home/$username/domains/$domain/public_html/app.js"
 echo "https://$domain/$uuid" > "/home/$username/domains/keepsub.txt"
 echo "支持保活的节点分享链接：https://$domain/$uuid"
+echo "可在文件管理器中的keepsub.txt文件中可查看复"
+echo "---------------------------------------------"
 echo "安装结束，请确保Node.js页面参数已设置完毕"
