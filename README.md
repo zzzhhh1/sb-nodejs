@@ -1,4 +1,4 @@
-## Webhostmost在Node.js环境搭建vless-ws-tls脚本
+## 一、Webhostmost在Node.js环境搭建vless-ws-tls脚本
 
 Webhostmost新账户使用Node.js本地环境进行搭建
 
@@ -18,7 +18,7 @@ Webhostmost新/老账户，建议使用外部保活方式，可使用workers_kee
 
 -----------------------------------------------------
 
-## Claw.Cloud在Node.js环境搭建vless-ws-tls脚本
+## 二、Claw.Cloud在Node.js环境搭建vless-ws-tls脚本
 
 填写UUID、端口、域名三个变量再运行脚本，现实一键无交互运行，每次重装后输出节点信息不变
 
