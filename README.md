@@ -1,6 +1,6 @@
 ## 一、Webhostmost在Node.js环境搭建vless-ws-tls脚本
 
-Webhostmost新账户目前仅支持Node.js本地环境编辑文件方式搭建
+Webhostmost新账户目前仅支持Node.js本地环境编辑或者上传文件方式搭建
 
 Webhostmost老账户可使用专用一键脚本(无交互)，也可以Node.js本地环境编辑文件方式搭建
 
